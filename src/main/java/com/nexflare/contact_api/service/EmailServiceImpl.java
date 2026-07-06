@@ -249,14 +249,14 @@ public class EmailServiceImpl implements EmailService {
                     border-radius:10px;padding:30px;">
 
                         <h2 style="color:#0d6efd;">
-                            Thank You!
+                            Thank You..!
                         </h2>
 
                         <p>Hello <b>%s</b>,</p>
 
                         <p>
                             Thank you for contacting
-                            <b>Nexflare Dynamics</b>.
+                            <b>NEXFLARE DYNAMICS PVT. LTD.</b>.
                         </p>
 
                         <p>
