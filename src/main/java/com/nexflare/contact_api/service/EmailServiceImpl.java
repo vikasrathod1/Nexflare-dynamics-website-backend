@@ -138,7 +138,7 @@ public class EmailServiceImpl implements EmailService {
 
     // Change this later to:
     // private final String ADMIN_EMAIL = "vikas.rathod@nexflaredynamics.com";
-    private final String ADMIN_EMAIL = "rbt19it132@gmail";
+    private final String ADMIN_EMAIL = "rbt19it132@gmail.com";
 
     @Override
     public void sendAdminEmail(ContactRequest request) {
