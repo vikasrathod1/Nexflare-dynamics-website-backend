@@ -134,21 +134,13 @@ public class ContactController {
 
             return ResponseEntity.ok(response);
 
-//        } catch (Exception e) {
-//
-//            // Print full exception in Render Logs
-//            e.printStackTrace();
-//
-//            response.put("success", false);
-//            response.put("message", e.getMessage()); // Temporary for debugging
-//
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
-//        }
         } catch (Exception e) {
+
+            // Print full exception in Render Logs
             e.printStackTrace();
 
             response.put("success", false);
-            response.put("message", e.getMessage());
+            response.put("message", e.getMessage()); // Temporary for debugging
 
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
         }
