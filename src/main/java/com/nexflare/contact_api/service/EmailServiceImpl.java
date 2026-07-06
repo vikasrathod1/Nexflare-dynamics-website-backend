@@ -218,10 +218,20 @@ public class EmailServiceImpl implements EmailService {
 
             System.out.println("✅ Admin Email Sent");
 
+//        } catch (MessagingException | MailException e) {
+//
+//            throw new RuntimeException("Failed to send Admin Email", e);
+//
+//        }
+
         } catch (MessagingException | MailException e) {
+            e.printStackTrace();
+
+            System.out.println("===== EMAIL ERROR =====");
+            System.out.println(e.getClass().getName());
+            System.out.println(e.getMessage());
 
             throw new RuntimeException("Failed to send Admin Email", e);
-
         }
 
     }
