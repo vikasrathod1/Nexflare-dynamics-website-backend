@@ -94,6 +94,31 @@ public class ContactController {
         return "Contact Controller Working";
     }
 
+//    @PostMapping("/send")
+//    public ResponseEntity<Map<String, Object>> send(@RequestBody ContactRequest request) {
+//
+//        Map<String, Object> response = new HashMap<>();
+//
+//        try {
+//
+//            emailService.sendAdminEmail(request);
+//            emailService.sendCustomerEmail(request);
+//
+//            response.put("success", true);
+//            response.put("message", "Thank you for contacting Nexflare Dynamics. Our team will contact you shortly.");
+//
+//            return ResponseEntity.ok(response);
+//
+//        } catch (Exception e) {
+//
+//            response.put("success", false);
+//            response.put("message", "Unable to send your message. Please try again later.");
+//
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+//        }
+//    }
+//}
+
     @PostMapping("/send")
     public ResponseEntity<Map<String, Object>> send(@RequestBody ContactRequest request) {
 
@@ -111,8 +136,11 @@ public class ContactController {
 
         } catch (Exception e) {
 
+            // Print full exception in Render Logs
+            e.printStackTrace();
+
             response.put("success", false);
-            response.put("message", "Unable to send your message. Please try again later.");
+            response.put("message", e.getMessage()); // Temporary for debugging
 
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
         }
